@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  /* background: radial-gradient(circle, #1F3756, #141539); */
+  text-align: center;
+}
+
+/* .dark {
+  background: radial-gradient(circle, #1F3756, #141539);
+  transition: background 0.4s ease-in-out;
+}
+.light {
+  background: radial-gradient(circle, #E0E5E6, #C8CBCC);
+  transition: background 0.4s ease-in-out;
+} */
+
+.paper {
+  background-image: url("../public/images/icon-paper.svg");
+  border: 10px solid hsl(230, 89%, 62%);
+}
+.scissors {
+  background-image: url("../public/images/icon-scissors.svg");
+  border: 10px solid hsl(39, 89%, 49%);
+}
+.rock {
+  background-image: url("../public/images/icon-rock.svg");
+  border: 10px solid hsl(349, 71%, 52%);
+}
+.lizard {
+  background-image: url("../public/images/icon-lizard.svg");
+  border: 10px solid hsl(261, 73%, 60%);
+}
+.spock {
+  background-image: url("../public/images/icon-spock.svg");
+  border: 10px solid hsl(189, 59%, 53%);
+}
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
+
+#win {
+  animation: shadowWinner 0.75s ease forwards;
+}
+@keyframes shadowWinner {
+  10% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px transparent,
+    0px 0px 0px 50px transparent,
+    0px 0px 0px 80px transparent;
+  }
+  40% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px rgba(253, 253, 253, 0.082),
+    0px 0px 0px 50px transparent,
+    0px 0px 0px 80px transparent;
+  }
+  70% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px rgba(253, 253, 253, 0.082),
+    0px 0px 0px 50px rgba(253, 253, 253, 0.082),
+    0px 0px 0px 80px transparent;
+  }
+  100% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px rgba(253, 253, 253, 0.082),
+    0px 0px 0px 50px rgba(253, 253, 253, 0.082),
+    0px 0px 0px 80px rgb(253, 253, 253, 0.082);
+  }
+}
+
+#winLight {
+  animation: shadowWinnerLight 0.75s ease forwards;
+}
+@keyframes shadowWinnerLight {
+  10% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px transparent,
+    0px 0px 0px 50px transparent,
+    0px 0px 0px 80px transparent;
+  }
+  40% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px #1F375625,
+    0px 0px 0px 50px transparent,
+    0px 0px 0px 80px transparent;
+  }
+  70% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px #1F375625,
+    0px 0px 0px 50px #1F375620,
+    0px 0px 0px 80px transparent;
+  }
+  100% {
+    box-shadow: inset 0px 8px 8px grey,
+    0px 0px 0px 20px #1F375625,
+    0px 0px 0px 50px #1F375620,
+    0px 0px 0px 80px #1F375615;
+  }
+}
